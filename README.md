@@ -9,6 +9,7 @@ EPOLL采用边缘触发模式。
 封装红黑树实现了一个配合EPOLL的定时器   
 最终实现了GET和POST方法，支持长连接。   
   
+  
 主要的类如下：  
 
 编写EventLoop类，封装了epoll的相关接口，实现事件监听。  
@@ -20,3 +21,7 @@ EPOLL采用边缘触发模式。
 编写ThreadPool类，线程池，负责执行任务。即解析，处理，响应HTTP请求的执行者。  
 编写MysqlPool类，数据库连接池，预先建立数据库连接。用于支持登陆，注册功能。  
 
+  
+模块机构图如下：
+
+![Image text](https://github.com/myandsql/-HTTP-/blob/main/%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.PNG)
