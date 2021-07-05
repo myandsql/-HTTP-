@@ -1,8 +1,8 @@
 # -HTTP-
 基于Linux环境下使用Code:blocks开发的简易HTTP服务器。  
   
-使用非阻塞的SOCKET。  
-EPOLL采用边缘触发模式。  
+使用非阻塞的socket。  
+epoll采用边缘触发模式。  
 Rector多线程模型
 使用状态机来解析HTPP请求。  
 由线程池来解析，处理，响应请求。  
