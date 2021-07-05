@@ -53,8 +53,8 @@
 		<Unit filename="http/http_request.h" />
 		<Unit filename="http/http_response.cpp" />
 		<Unit filename="http/http_response.h" />
-		<Unit filename="log/Log.cpp" />
-		<Unit filename="log/Log.h" />
+		<Unit filename="log/log.cpp" />
+		<Unit filename="log/log.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mysql_pool/mysql_pool.cpp" />
 		<Unit filename="mysql_pool/mysql_pool.h" />
