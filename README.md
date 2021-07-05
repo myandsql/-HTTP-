@@ -44,6 +44,15 @@ Rectaor多线程模型
 
 ![Image text](https://github.com/myandsql/-HTTP-/blob/main/%E6%B5%8B%E5%8E%8B.PNG)
 
+### 功能测试
+
+登录：
+
+![Image gif](https://github.com/myandsql/-HTTP-/blob/main/login.gif)
+
+注册：
+![Image gif](https://github.com/myandsql/-HTTP-/blob/main/register.gif)
+
 
 
 
