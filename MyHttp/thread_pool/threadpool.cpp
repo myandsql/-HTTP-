@@ -82,7 +82,7 @@ void ThreadPool::run(ThreadPool *pool)
     {
         task*ret=pool->get();
         ret->fun(ret->args);
-        LOG_DEBUG("正在运行的工作线程%d",run_size);
+        //LOG_DEBUG("正在运行的工作线程%d",run_size);
         delete ret;
     }
 }
