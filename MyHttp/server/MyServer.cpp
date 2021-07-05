@@ -55,7 +55,6 @@ void MyServer::start()
     while(1)
     {
         len=m_event_pool.wait(m_timer_manger.get_time());
-        std::cout<<"len:"<<len<<std::endl;
         for(int i=0; i<len; i++)
         {
             if(ev[i].data.fd==listen_fd)
@@ -101,7 +100,7 @@ void MyServer::start()
                 delete  m_response[time_out_fd];
                 m_response[time_out_fd]=NULL;
             }
-            std::cout<<"time_out_fd:"<<time_out_fd<<std::endl;
+           // std::cout<<"time_out_fd:"<<time_out_fd<<std::endl;
             close(time_out_fd);
         }
 

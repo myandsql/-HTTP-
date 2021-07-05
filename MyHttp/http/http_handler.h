@@ -1,6 +1,7 @@
 #ifndef HTTP_HANDLER_H
 #define HTTP_HANDLER_H
 
+#include"../log/log.h"
 #include"../mysql_pool/mysql_pool.h"
 #include"./http_request.h"
 #include"./http_response.h"

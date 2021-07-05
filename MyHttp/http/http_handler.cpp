@@ -124,9 +124,9 @@ void* HttpHandler::run_read(void*args)
     }
     catch(std::exception e)
     {
+        LOG_ERROR("excpetion %d is colse!",ptr->fd);
         ptr->arg_listener->delete_event(ptr->fd,EPOLLIN);
         delete *(ptr->arg_request);
-        std::cout<<"exception"<<std::endl;
         *(ptr->arg_request)=NULL;
         close(ptr->fd);
     }
@@ -165,6 +165,7 @@ void* HttpHandler::run_write(void*args)
     }
     catch(std::exception e)
     {
+        LOG_ERROR("excpetion %d is colse!",ptr->fd);
         if(*(ptr->arg_request))
         {
             delete *(ptr->arg_request);

@@ -1,7 +1,7 @@
 #include<iostream>
 #include"./mysql_pool/mysql_pool.h"
 #include<pthread.h>
-#include"./log/Log.h"
+#include"./log/log.h"
 #include<unistd.h>
 #include"./thread_pool/thread_pool.h"
 #include"./timer/timer.h"
@@ -19,7 +19,7 @@
 int main()
 {
     ThreadPool p(5,1024);
-    MyServer host(1024,&p);
+    MyServer host(15000,&p);
     host.init();
     host.start();
     return 0;

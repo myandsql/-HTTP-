@@ -20,7 +20,7 @@ EventLoop::EventLoop(int size)
     {
         LOG_ERROR("bind falil");
     }
-    ret=listen(m_listen_fd,1024);
+    ret=listen(m_listen_fd,size);
     if(ret==-1)
     {
         LOG_ERROR("listen falil");

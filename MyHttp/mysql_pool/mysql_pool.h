@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include"../syn/cond.h"
 #include "../syn/locker.h"
-#include"../log/Log.h"
+#include"../log/log.h"
 #include <queue>
 using std::string;
 class MysqlPool
