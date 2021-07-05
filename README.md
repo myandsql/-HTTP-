@@ -40,4 +40,10 @@ Rector多线程模型
 ![Image text](https://github.com/myandsql/-HTTP-/blob/main/%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.PNG)
 
 
+### webbench测压如下：
+
+![Image text](https://github.com/myandsql/-HTTP-/blob/main/%E6%B5%8B%E5%8E%8B.PNG)
+
+
+
 
