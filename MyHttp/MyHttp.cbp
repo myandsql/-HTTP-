@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MyHttp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/MyHttp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="syn" />
+					<Add directory="mysqlpool" />
+					<Add directory="log" />
+					<Add directory="threadpool" />
+					<Add directory="timer" />
+					<Add directory="http" />
+					<Add directory="listener" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/MyHttp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="syn" />
+					<Add directory="mysqlpool" />
+					<Add directory="log" />
+					<Add directory="threadpool" />
+					<Add directory="timer" />
+					<Add directory="http" />
+					<Add directory="listener" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="event_loop/event_loop.cpp" />
+		<Unit filename="event_loop/event_loop.h" />
+		<Unit filename="http/http_handler.cpp" />
+		<Unit filename="http/http_handler.h" />
+		<Unit filename="http/http_request.cpp" />
+		<Unit filename="http/http_request.h" />
+		<Unit filename="http/http_response.cpp" />
+		<Unit filename="http/http_response.h" />
+		<Unit filename="log/Log.cpp" />
+		<Unit filename="log/Log.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mysql_pool/mysql_pool.cpp" />
+		<Unit filename="mysql_pool/mysql_pool.h" />
+		<Unit filename="server/MyServer.cpp" />
+		<Unit filename="server/MyServer.h" />
+		<Unit filename="syn/cond.cpp" />
+		<Unit filename="syn/cond.h" />
+		<Unit filename="syn/locker.cpp" />
+		<Unit filename="syn/locker.h" />
+		<Unit filename="syn/safe_queue.h" />
+		<Unit filename="syn/sem.cpp" />
+		<Unit filename="syn/sem.h" />
+		<Unit filename="thread_pool/thread_pool.h" />
+		<Unit filename="thread_pool/threadpool.cpp" />
+		<Unit filename="timer/timer.cpp" />
+		<Unit filename="timer/timer.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

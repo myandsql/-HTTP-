@@ -1,0 +1,216 @@
+# depslib dependency file v1.0
+1625375847 source:/home/han/MyHttp/MyHttp/syn/cond.cpp
+	"cond.h"
+
+1623645244 /home/han/MyHttp/MyHttp/syn/cond.h
+	<pthread.h>
+	<exception>
+	"locker.h"
+
+1625375846 source:/home/han/MyHttp/MyHttp/syn/locker.cpp
+	"locker.h"
+
+1623645229 /home/han/MyHttp/MyHttp/syn/locker.h
+	<pthread.h>
+	<exception>
+	"cond.h"
+
+1625375844 source:/home/han/MyHttp/MyHttp/syn/sem.cpp
+	"sem.h"
+
+1623410834 /home/han/MyHttp/MyHttp/syn/sem.h
+	<semaphore.h>
+	<exception>
+
+1625375895 source:/home/han/MyHttp/MyHttp/main.cpp
+	<iostream>
+	"./mysql_pool/mysql_pool.h"
+	<pthread.h>
+	"./log/Log.h"
+	<unistd.h>
+	"./thread_pool/thread_pool.h"
+	"./timer/timer.h"
+	<sys/socket.h>
+	<arpa/inet.h>
+	<sys/types.h>
+	<cstring>
+	"./http/http_request.h"
+	<fcntl.h>
+	<unistd.h>
+	"./http/http_response.h"
+	"./event_loop/event_loop.h"
+	"./server/MyServer.h"
+
+1623488747 /home/han/MyHttp/MyHttp/syn/safe_queue.h
+	"locker.h"
+
+1625040148 /home/han/MyHttp/MyHttp/mysqlpool/mysql_pool.h
+	<string>
+	<iostream>
+	<mysql/mysql.h>
+	<stdlib.h>
+	"../syn/cond.h"
+	"../syn/locker.h"
+	"../log/Log.h"
+	<queue>
+
+1625044452 source:/home/han/MyHttp/MyHttp/mysqlpool/mysql_pool.cpp
+	"mysql_pool.h"
+
+1625375734 source:/home/han/MyHttp/MyHttp/log/Log.cpp
+	"Log.h"
+	<iostream>
+	<error.h>
+	<unistd.h>
+
+1624333947 /home/han/MyHttp/MyHttp/log/Log.h
+	<cstdarg>
+	<pthread.h>
+	<cstdio>
+	<fstream>
+	<time.h>
+	<queue>
+	<cstring>
+	<sys/types.h>
+	<dirent.h>
+	<sys/stat.h>
+	"locker.h"
+	<iostream>
+
+1624264607 /home/han/MyHttp/MyHttp/threadpool/threadpool.h
+	"safe_queue.h"
+	<exception>
+	<queue>
+
+1625041102 source:/home/han/MyHttp/MyHttp/threadpool/threadpool.cpp
+	"threadpool.h"
+	"../log/Log.h"
+	<iostream>
+
+1625381510 /home/han/MyHttp/MyHttp/timer/timer.h
+	<sys/time.h>
+	<set>
+	<vector>
+	<functional>
+	"../syn/locker.h"
+
+1625381510 source:/home/han/MyHttp/MyHttp/timer/timer.cpp
+	"timer.h"
+	<iostream>
+
+1625376087 source:/home/han/MyHttp/MyHttp/http/http_request.cpp
+	"http_request.h"
+
+1625374072 /home/han/MyHttp/MyHttp/http/http_request.h
+	<string>
+	<unistd.h>
+	<sys/socket.h>
+	<errno.h>
+	<queue>
+	<unordered_map>
+	"../log/Log.h"
+
+1625385216 source:/home/han/MyHttp/MyHttp/http/http_response.cpp
+	"http_response.h"
+
+1625374193 /home/han/MyHttp/MyHttp/http/http_response.h
+	<unordered_map>
+	<cstring>
+	<sys/socket.h>
+	<unistd.h>
+	<iostream>
+	<sys/stat.h>
+	<fcntl.h>
+	<sys/sendfile.h>
+	<error.h>
+
+1624703574 source:/home/han/MyHttp/MyHttp/listener/listener.cpp
+	"listener.h"
+
+1624698155 /home/han/MyHttp/MyHttp/listener/listener.h
+	<sys/epoll.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	"../log/Log.h"
+	"../timer/timer.h"
+	<exception>
+	<unistd.h>
+	"../log/Log.h"
+	<fcntl.h>
+
+1625375831 source:/home/han/MyHttp/MyHttp/server/MyServer.cpp
+	"MyServer.h"
+
+1625381510 /home/han/MyHttp/MyHttp/server/MyServer.h
+	"../http/http_request.h"
+	"../http/http_response.h"
+	"../http/http_handler.h"
+	"../event_loop/event_loop.h"
+	"../thread_pool/thread_pool.h"
+	"../mysql_pool/mysql_pool.h"
+	"../timer/timer.h"
+
+1625378399 source:/home/han/MyHttp/MyHttp/http/http_handler.cpp
+	"http_handler.h"
+
+1625381510 /home/han/MyHttp/MyHttp/http/http_handler.h
+	"../mysql_pool/mysql_pool.h"
+	"./http_request.h"
+	"./http_response.h"
+	"../event_loop/event_loop.h"
+	"../timer/timer.h"
+
+1625374465 source:/home/han/MyHttp/MyHttp/event_pool/listener.cpp
+	"event_loop.h"
+
+1625374416 /home/han/MyHttp/MyHttp/event_pool/event_loop.h
+	<sys/epoll.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	"../log/Log.h"
+	"../timer/timer.h"
+	<exception>
+	<unistd.h>
+	"../log/Log.h"
+	<fcntl.h>
+
+1625381510 /home/han/MyHttp/MyHttp/event_loop/event_loop.h
+	<sys/epoll.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	"../log/Log.h"
+	"../timer/timer.h"
+	<exception>
+	<unistd.h>
+	"../log/Log.h"
+	<fcntl.h>
+
+1625374465 source:/home/han/MyHttp/MyHttp/event_loop/listener.cpp
+	"event_loop.h"
+
+1625381510 source:/home/han/MyHttp/MyHttp/event_loop/event_loop.cpp
+	"event_loop.h"
+
+1625374894 /home/han/MyHttp/MyHttp/mysql_pool/mysql_pool.h
+	<string>
+	<iostream>
+	<mysql/mysql.h>
+	<stdlib.h>
+	"../syn/cond.h"
+	"../syn/locker.h"
+	"../log/Log.h"
+	<queue>
+
+1625375824 source:/home/han/MyHttp/MyHttp/mysql_pool/mysql_pool.cpp
+	"mysql_pool.h"
+
+1625375115 /home/han/MyHttp/MyHttp/thread_pool/thread_pool.h
+	"safe_queue.h"
+	<exception>
+	<queue>
+
+1625375800 source:/home/han/MyHttp/MyHttp/thread_pool/threadpool.cpp
+	"thread_pool.h"
+	"../log/Log.h"
+	<iostream>
+
