@@ -1,5 +1,5 @@
 #include "thread_pool.h"
-#include "../log/Log.h"
+#include "../log/log.h"
 #include<iostream>
 ThreadPool::ThreadPool(int thread_size,int max_request)
 {
@@ -43,10 +43,10 @@ bool ThreadPool::push(task*value)
 {
     bool ret=true;
     m_mutex.lock();
-    if(m_task_queue.size()<m_max_request)
+    if((int)m_task_queue.size()<m_max_request)
     {
         m_task_queue.push(value);
-        if(run_size<m_size&&m_task_queue.size()>run_size)m_cond.signal();
+        if(run_size<m_size&&(int)m_task_queue.size()>run_size)m_cond.signal();
     }
     else ret=false;
     m_mutex.unlock();
@@ -82,7 +82,8 @@ void ThreadPool::run(ThreadPool *pool)
     {
         task*ret=pool->get();
         ret->fun(ret->args);
-        //LOG_DEBUG("正在运行的工作线程%d",run_size);
+       // LOG_DEBUG("正在运行的工作线程%d",run_size);
+
         delete ret;
     }
 }
