@@ -54,6 +54,7 @@ bool HttpResponse::buff_init()
         {
             if(m_path.back()=='g') m_headers["Content-Type"]=" image/png\r\n";
             else if(m_path.back()=='s')	m_headers["Content-Type"]=" text/css\r\n";
+            else if(m_path.back()=='f')m_headers["Content-Type"]=" image/gif\r\n";
         }
         struct stat filebuff;
         fstat(m_file_fd,&filebuff);
