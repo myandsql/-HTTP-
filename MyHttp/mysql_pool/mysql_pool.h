@@ -9,38 +9,36 @@
 #include"../log/log.h"
 #include <queue>
 using std::string;
-class MysqlPool
-{
-    public:
-        static MysqlPool *GetInstance();
-        bool ReleaseConnection(MYSQL *conn); //释放连接
-	    int GetFreeConn();
-	    MYSQL* GetConnection();
-        bool init(string server,string user,string password,string db,int max_size);
-    protected:
-        MysqlPool();
-        virtual ~MysqlPool();
-        string m_server;
-        string m_password;
-        string m_user;
-        string m_db;
-        int m_size;
-        int m_free;
-        std::queue<MYSQL*> m_queue;
-        cond m_cond;
-        locker m_mutex;
+class MysqlPool {
+public:
+    static MysqlPool *GetInstance();
+    bool ReleaseConnection(MYSQL *conn); //释放连接
+    int GetFreeConn();
+    MYSQL* GetConnection();
+    bool init(string server, string user, string password, string db, int max_size);
+protected:
+    MysqlPool();
+    virtual ~MysqlPool();
+    string m_server;
+    string m_password;
+    string m_user;
+    string m_db;
+    int m_size;
+    int m_free;
+    std::queue<MYSQL*> m_queue;
+    cond m_cond;
+    locker m_mutex;
 
 
-    private:
+private:
 };
 
-class mysqlRAII
-{
-    public:
-        mysqlRAII(MYSQL**m);
-        virtual ~mysqlRAII();
-    private:
-        MYSQL* m_con;
+class mysqlRAII {
+public:
+    mysqlRAII(MYSQL**m);
+    virtual ~mysqlRAII();
+private:
+    MYSQL* m_con;
 };
 
 #endif // MYSQL_POOL_H

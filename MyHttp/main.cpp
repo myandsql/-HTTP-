@@ -16,10 +16,9 @@
 #include"./event_loop/event_loop.h"
 #include"./server/MyServer.h"
 
-int main()
-{
-    ThreadPool p(5,1024);
-    MyServer host(15000,&p);
+int main() {
+    ThreadPool p(5, 1024);
+    MyServer host(15000, &p);
     host.init();
     host.start();
     return 0;

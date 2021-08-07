@@ -10,14 +10,13 @@
 #include<unistd.h>
 #include"../log/log.h"
 #include<fcntl.h>
-class EventLoop
-{
+class EventLoop {
 public:
-    EventLoop(int size=1024);
+    EventLoop(int size = 1024);
     virtual ~EventLoop();
-    void delete_event(int fd,uint32_t event);
-    void change_event(int fd,uint32_t event);
-    void add_event(int fd,uint32_t event);
+    void delete_event(int fd, uint32_t event);
+    void change_event(int fd, uint32_t event);
+    void add_event(int fd, uint32_t event);
     int get_listen_fd();
     int wait(int timeout);
     epoll_event* get_event();

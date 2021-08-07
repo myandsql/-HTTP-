@@ -12,21 +12,20 @@
 
 
 
-class MyServer
-{
-    public:
-        MyServer(int size,ThreadPool*pool);
-        virtual ~MyServer();
-        void init();
-        void start();
-    protected:
-        ThreadPool *m_pool;
-        HttpRequest** m_request;
-        HttpResponse** m_response;
-        EventLoop m_event_pool;
-        TimerManger m_timer_manger;
-        int m_size;
-    private:
+class MyServer {
+public:
+    MyServer(int size, ThreadPool*pool);
+    virtual ~MyServer();
+    void init();
+    void start();
+protected:
+    ThreadPool *m_pool;
+    HttpRequest** m_request;
+    HttpResponse** m_response;
+    EventLoop m_event_pool;
+    TimerManger m_timer_manger;
+    int m_size;
+private:
 };
 
 #endif // MYSERVER_H
